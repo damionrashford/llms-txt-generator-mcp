@@ -10,20 +10,20 @@ A powerful MCP (Model Context Protocol) server that automatically generates `llm
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/damionrashford/llms-txt-generator.git
-   cd llms-txt-generator
+   git clone https://github.com/damionrashford/llms-txt-generator-mcp.git
+   cd llms-txt-generator-mcp
    ```
 
 2. **Create your deeplink:**
    
-   Replace `/path/to/your/llms-txt-generator` with your actual path in this configuration:
+   Replace `/path/to/your/llms-txt-generator-mcp` with your actual path in this configuration:
    ```json
    {
      "llms-txt-generator": {
        "command": "python3",
-       "args": ["/path/to/your/llms-txt-generator/server.py"],
+       "args": ["/path/to/your/llms-txt-generator-mcp/server.py"],
        "env": {
-         "PYTHONPATH": "/path/to/your/llms-txt-generator",
+         "PYTHONPATH": "/path/to/your/llms-txt-generator-mcp",
          "LOG_LEVEL": "INFO"
        },
        "timeout": 60000,
@@ -35,7 +35,7 @@ A powerful MCP (Model Context Protocol) server that automatically generates `llm
 
 3. **Generate the deeplink:**
    - Copy the JSON configuration above
-   - Replace `/path/to/your/llms-txt-generator` with your actual path
+   - Replace `/path/to/your/llms-txt-generator-mcp` with your actual path
    - Base64 encode the JSON
    - Create the deeplink: `cursor://anysphere.cursor-deeplink/mcp/install?name=llms-txt-generator&config=YOUR_BASE64_CONFIG`
 
@@ -45,8 +45,8 @@ A powerful MCP (Model Context Protocol) server that automatically generates `llm
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/damionrashford/llms-txt-generator.git
-   cd llms-txt-generator
+   git clone https://github.com/damionrashford/llms-txt-generator-mcp.git
+   cd llms-txt-generator-mcp
    ```
 
 2. **Set up the environment:**
@@ -64,9 +64,9 @@ A powerful MCP (Model Context Protocol) server that automatically generates `llm
      "mcpServers": {
        "llms-txt-generator": {
          "command": "python3",
-         "args": ["/path/to/your/llms-txt-generator/server.py"],
+         "args": ["/path/to/your/llms-txt-generator-mcp/server.py"],
          "env": {
-           "PYTHONPATH": "/path/to/your/llms-txt-generator",
+           "PYTHONPATH": "/path/to/your/llms-txt-generator-mcp",
            "LOG_LEVEL": "INFO"
          },
          "timeout": 60000,
@@ -135,8 +135,8 @@ The tool will generate:
 
 1. **Clone and setup:**
    ```bash
-   git clone https://github.com/damionrashford/llms-txt-generator.git
-   cd llms-txt-generator
+   git clone https://github.com/damionrashford/llms-txt-generator-mcp.git
+   cd llms-txt-generator-mcp
    python -m venv venv
    source venv/bin/activate
    pip install -e .
@@ -155,7 +155,7 @@ The tool will generate:
 ### Project Structure
 
 ```
-llms-txt-generator/
+llms-txt-generator-mcp/
 ├── server.py                 # Main MCP server
 ├── generate_llms_txt.py      # Standalone CLI tool
 ├── generate_deeplink.py      # Helper script for creating deeplinks
@@ -203,7 +203,7 @@ To make this available to other users, they can:
 1. **Prepare the configuration:**
    ```bash
    # Create the JSON config (replace with your path)
-   echo '{"llms-txt-generator":{"command":"python3","args":["/path/to/your/llms-txt-generator/server.py"],"env":{"PYTHONPATH":"/path/to/your/llms-txt-generator","LOG_LEVEL":"INFO"},"timeout":60000,"initTimeout":15000,"stderr":"inherit"}}' > config.json
+   echo '{"llms-txt-generator":{"command":"python3","args":["/path/to/your/llms-txt-generator-mcp/server.py"],"env":{"PYTHONPATH":"/path/to/your/llms-txt-generator-mcp","LOG_LEVEL":"INFO"},"timeout":60000,"initTimeout":15000,"stderr":"inherit"}}' > config.json
    ```
 
 2. **Base64 encode:**
